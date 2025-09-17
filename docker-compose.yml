@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports: 
+      - "8080:8000"
+    volumes:
+      - .:/app
+    command: python app/get_token.py
+    working_dir: /app
